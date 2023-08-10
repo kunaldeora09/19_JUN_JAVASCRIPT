@@ -20,11 +20,11 @@
     <button onclick="add()">Addition</button>
 
     <script>
-        function add()
-        {
-            var a = document.getElementById("num1").value;
-            var b = document.getElementById("num2").value;
-            alert(parseInt(a) + parseInt(b));
+        function add() {
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            var c = a + b;
+            alert("Addition is:- " + c);
         }
     </script>
 </body>
