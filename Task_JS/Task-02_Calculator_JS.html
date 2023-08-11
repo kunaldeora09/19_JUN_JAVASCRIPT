@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="calculator.css">
+    <title>Task 02 Calculator in Javascript</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
-            background-image: linear-gradient(to left ,red, blue);
+
+        body {
+            background-image: linear-gradient(to left, red, blue, orange);
         }
 
         .container {
             margin: 100px auto;
             width: 50%;
-            background-color: rgb(55, 216, 208);
+            background-image: linear-gradient(30deg, rgba(226, 123, 221, 0.768), rgba(150, 214, 125, 0.768));
             color: black;
-            padding: 10px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 15px black;
         }
 
         .input {
@@ -29,29 +31,46 @@
             justify-content: space-between;
             padding-top: 20px;
         }
-        
-        
+
+        label {
+            font-size: 30px;
+        }
+
+
         input {
             border: none;
             outline: none;
             width: 50%;
             background-color: rgb(196, 79, 190);
             color: white;
+            border-radius: 25px;
+            padding: 5px;
+            font-weight: bold;
         }
-        input:focus{
+
+        input:focus {
             border-bottom: 2px solid black;
         }
+
         .button {
             display: flex;
             justify-content: space-between;
             margin-top: 15px;
         }
 
-        button {
-            padding: 10px 25px;
+        a {
+            color: black;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+
+        button,
+        a {
+            padding: 6px 20px;
             font-size: 30px;
             border: none;
             cursor: pointer;
+            border-radius: 25px;
             background-color: rgb(237, 100, 111);
 
         }
@@ -66,23 +85,28 @@
 <body>
     <div class="container">
         <div class="input">
-            <h2>Enter the 1st Number</h2><input type="number" id="first">
+            <label for="first">Enter the value 1:-</label>
+            <input type="text" name="first" id="first">
         </div>
         <div class="input">
-            <h2>Enter the 2nd Number</h2><input type="number" id="second">
+            <label for="second">Enter the value 2:-</label>
+            <input type="text" name="second" id="second">
         </div>
         <div class="button">
-            <button onclick="addnumber()">+</button>
-            <button onclick="substractnumber()">-</button>
-            <button onclick="multiplynumber()">*</button>
-            <button onclick="dividenumber()">/</button>
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="multi()">*</button>
+            <button onclick="divide()">/</button>
+            <button onclick="modulo()">%</button>
+            <button onclick="clear()">C</button>
         </div>
         <div class="input">
-            <h2>Result</h2><input type="number" id="display">
+            <label for="ans">Answer is:-</label>
+            <input type="text" name="ans" id="display">
         </div>
     </div>
     <script>
-        function addnumber() {
+        function add() {
             var inp_data1 = parseFloat(document.getElementById("first").value);
             var inp_data2 = parseFloat(document.getElementById("second").value);
 
@@ -90,7 +114,7 @@
             document.getElementById("display").value = sum;
             console.log(sum);
         }
-        function substractnumber() {
+        function sub() {
             var inp_data1 = parseFloat(document.getElementById("first").value);
             var inp_data2 = parseFloat(document.getElementById("second").value);
 
@@ -98,7 +122,7 @@
             document.getElementById("display").value = sub;
             console.log(sub);
         }
-        function multiplynumber() {
+        function multi() {
             var inp_data1 = parseFloat(document.getElementById("first").value);
             var inp_data2 = parseFloat(document.getElementById("second").value);
 
@@ -106,13 +130,21 @@
             document.getElementById("display").value = multi;
             console.log(multi);
         }
-        function dividenumber() {
+        function divide() {
             var inp_data1 = parseFloat(document.getElementById("first").value);
             var inp_data2 = parseFloat(document.getElementById("second").value);
 
             var divide = inp_data1 / inp_data2;
             document.getElementById("display").value = divide;
             console.log(divide);
+        }
+        function modulo() {
+            var inp_data1 = parseFloat(document.getElementById("first").value);
+            var inp_data2 = parseFloat(document.getElementById("second").value);
+
+            var modulo = inp_data1 % inp_data2;
+            document.getElementById("display").value = modulo;
+            console.log(modulo);
         }
     </script>
 </body>
