@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 50%;
+            border: 2px solid black;
+            margin: 0 auto;
+            text-align: center;
+            background-color: coral;
+            position: relative;
+        }
+
+        p {
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        input {
+            position: absolute;
+            width: 60%;
+            left: 240px;
+        }
+
+        label {
+            position: absolute;
+            left: 20px;
+        }
+
+        button {
+            padding: 10px 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Marksheet for Computer Science</h1>
+        <p>Enter Marks</p>
+        <label for="C lang">1. C Language</label>
+        <input type="number" name="C lang" id="num1">
+
+        <br>
+        <br>
+
+        <label for="C++">2. C++ Language</label>
+        <input type="number" name="C++" id="num2">
+
+        <br>
+        <br>
+
+        <label for="database">3. Database</label>
+        <input type="number" name="database" id="num3">
+
+        <br>
+        <br>
+
+        <label for="html">4. HTML</label>
+        <input type="number" name="html" id="num4">
+
+        <br>
+        <br>
+
+        <label for="css">5. CSS</label>
+        <input type="number" name="css" id="num5">
+
+        <br>
+        <br>
+
+        <label for="php">6. PHP</label>
+        <input type="number" name="php" id="num6">
+
+        <br>
+        <br>
+
+        <label for="corejava">7. Core Java</label>
+        <input type="number" name="corejava" id="num7">
+
+        <br>
+        <br>
+
+        <button onclick="res()">Result</button>
+
+        <script>
+            function res() {
+                var a = parseFloat(document.getElementById("num1").value);
+                var b = parseFloat(document.getElementById("num2").value);
+                var c = parseFloat(document.getElementById("num3").value);
+                var d = parseFloat(document.getElementById("num4").value);
+                var e = parseFloat(document.getElementById("num5").value);
+                var f = parseFloat(document.getElementById("num6").value);
+                var g = parseFloat(document.getElementById("num7").value);
+
+                var add = a + b + c + d + e + f + g;
+
+                alert(add);
+
+                var per = add / 700 * 100;
+
+                alert(per + " %");
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>
