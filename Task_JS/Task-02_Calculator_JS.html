@@ -98,8 +98,6 @@
             <button onclick="multi()">*</button>
             <button onclick="divide()">/</button>
             <button onclick="modulo()">%</button>
-            <!-- <a href="">C</a> -->
-            <!-- <input type="reset" name="" id=""> -->
             <button onclick="clearHai()">C</button>
         </div>
         <div class="input">
@@ -150,7 +148,9 @@
         }
 
         function clearHai() {
-            
+            document.getElementById("first").value = "";
+            document.getElementById("second").value = "";
+            document.getElementById("display").value = "";
         }
     </script>
 </body>
