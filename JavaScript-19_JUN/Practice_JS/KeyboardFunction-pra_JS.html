@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Board Function practice</title>
+</head>
+<body>
+    <h1>OnKeyup</h1>
+    <input type="number" name="OnKeyup" id="OnKeyup" onkeyup="cli(this)">
+
+    <!-- <h1>OnKeydown</h1>
+    <input type="number" name="OnKeydown" id="OnKeydown" onkeydown="cli(this)"> -->
+
+    <!-- <h1>OnKeypress</h1>
+    <input type="number" name="OnKeypress" id="OnKeypress" onkeypress="cli(this)"> -->
+
+    <!-- <h1>Onblur</h1>
+    <input type="number" name="Onblur" id="Onblur" onblur="cli(this)"> -->
+    <br>
+    <br>
+    <div id="key1"></div>
+    <hr>
+
+    <script>
+        function cli(a) {
+        let num = a.value;
+        if (num>50) {
+            document.getElementById("key1").innerText = "Thik Hai";
+        } else if(num == "") {
+            document.getElementById("key1").innerText = "";
+        } else {
+            document.getElementById("key1").innerText = "Nhi Thik Hai";
+        }    
+        }
+    </script>
+</body>
+</html>
