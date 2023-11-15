@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Down Event practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Key Down Event</h1>
+    <input type="text" />
+    <script>
+      $(function () {
+        $("input").keydown(function () {
+          $("body").css("background-color", "red");
+        });
+
+        $("input").keyup(function () {
+          $("body").css("background-color", "blue");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add CSS practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Hello jQuery</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure harum
+      distinctio ea. Deserunt, porro qui impedit illum ut laboriosam, totam ipsa
+      maxime rem quod dolorem quibusdam error modi, placeat ipsum nesciunt
+      quidem laudantium sint amet harum commodi. Modi maxime expedita pariatur
+      beatae, dolores debitis dolor quae repudiandae facere magnam in qui
+      laboriosam ipsum hic. Perspiciatis nulla earum at hic atque. Ipsum ea
+      excepturi unde corrupti sequi eaque sint illum saepe iste accusantium,
+      obcaecati repellat quidem nulla eveniet magni alias dolores enim molestiae
+      consectetur, quisquam explicabo. Laboriosam magni reprehenderit at! Sed,
+      quibusdam ad voluptate itaque voluptatum est maiores odit atque
+      praesentium.
+    </p>
+    <h2>Ending</h2>
+    <p class="ch">Lorem ipsum dolor sit amet.</p>
+    <span>Hello User Click Me!</span>
+    <br />
+    <br />
+    <br />
+    <span class="sp">Click</span>
+    <br />
+    <br />
+    <button class="hi">blue</button>
+    <button class="sh">red</button>
+
+    <script>
+      $(document).ready(function () {
+        $("h1").css("color", "white");
+        $("h1").css("background-color", "red");
+        $("p").css({ backgroundColor: "gray", color: "pink" });
+        $("h2").css("color", "yellow").css("backgroundColor", "red");
+        $(".ch").css({ color: "red" });
+      });
+
+      $(function () {
+        $("span").click(function () {
+          $(this).css({ backgroundColor: "lightblue", color: "red" });
+        });
+      });
+
+      $(function () {
+        $(".hi").click(function () {
+          $(".sp").css({backgroundColor: "blue", color : "yellow" });
+        });
+        $(".sh").click(function () {
+          $(".sp").css({ backgroundColor: "red", color: "white" });
+        });
+      });
+    </script>
+  </body>
+</html>

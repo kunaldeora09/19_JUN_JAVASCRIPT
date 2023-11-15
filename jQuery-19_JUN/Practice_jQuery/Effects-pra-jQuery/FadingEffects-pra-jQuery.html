@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fading Effects practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .sh {
+        width: 200px;
+        height: 100px;
+        border: 2px solid black;
+        margin: 100px auto;
+        background-color: brown;
+        color: white;
+      }
+      .set {
+        margin: 0 auto;
+        width: 330px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sh">Showing Effects</div>
+    <div class="set">
+      <button class="fadein">fadein</button>
+      <button class="fadeout">fadeout</button>
+      <button class="fadetoggle">fade toggle</button>
+      <button class="fadeto">fadeto</button>
+      <button class="fadeto2">fadeto 2</button>
+    </div>
+    <script>
+      $(function () {
+        $(".fadein").click(function () {
+          $(".sh").fadeIn(2000, function () {
+            alert("it's Fadein");
+          });
+        });
+        $(".fadeout").click(function () {
+          $(".sh").fadeOut(2000, function () {
+            alert("it's Fadeout");
+          });
+        });
+        $(".fadetoggle").click(function () {
+          $(".sh").fadeToggle(2000, function () {
+            alert("it's Fadetoggle");
+          });
+        });
+        $(".fadeto").click(function () {
+          $(".sh").fadeTo(2000,0.4, function(){
+            alert("it's Fadeto");
+          });
+        });
+        $(".fadeto2").click(function () {
+          $(".sh").fadeTo(2000, 1, function(){
+            alert("it's Fadeto 2");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

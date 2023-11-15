@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serialize Form practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container {
+        height: 200px;
+        border: 2px solid black;
+        background-color: brown;
+        color: white;
+        margin-top: 100px;
+      }
+      .show {
+        border: 2px solid black;
+        height: 100px;
+        width: 90%;
+        margin: 15px auto;
+        background-color: chocolate;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <table>
+          <tr>
+            <td>
+              <label for="name">Name</label>
+            </td>
+            <td>
+              <input type="text" name="Name" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="password">Password</label>
+            </td>
+            <td>
+              <input type="password" name="Password" />
+            </td>
+          </tr>
+        </table>
+      </form>
+      <button>Serialize</button>
+      <div class="show"></div>
+    </div>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          $(".show").text($("form").serialize());
+        });
+      });
+    </script>
+  </body>
+</html>

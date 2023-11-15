@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add HTML practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .one {
+        background-color: brown;
+        color: white;
+        width: 200px;
+        height: 100px;
+      }
+
+      .two {
+        background-color: chocolate;
+        color: white;
+        margin: 30px 0px 30px 0px;
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">jQuery</div>
+    <div class="two"></div>
+    <button class="change">Change jQuery</button>
+    <button class="print">print</button>
+    <br />
+    <br />
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem, ipsum dolor.</p>
+    <button class="fun">Click</button>
+
+    <script>
+      $(function () {
+        $(".change").click(function () {
+          $(".one").html("Change jQuery");
+        });
+
+        $(".print").click(function () {
+          alert($(".one").html());
+          $(".two").text($(".one").html());
+        });
+
+        $(".fun").click(function () {
+          $("p").html(function (n) {
+            return "paragraph index:- " + n;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

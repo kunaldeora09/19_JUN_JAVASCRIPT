@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double Click Mouse Event practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .sh {
+        width: 200px;
+        height: 100px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        background-color: chocolate;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sh">My Color is Chocolate</div>
+    <h2>Double Click</h2>
+    <button class="red">Red</button>
+    <button class="blue">Blue</button>
+    <button class="green">Green</button>
+    <button class="black">Black</button>
+    <button class="reset">Reset</button>
+
+    <script>
+      $(function () {
+        $(".red").dblclick(function () {
+          $(".sh").css({backgroundColor: "red", color: "white"});
+          $(".sh").html("My Color is Red");
+        });
+
+        $(".blue").dblclick(function () {
+          $(".sh").css({backgroundColor: "blue", color: "white"});
+          $(".sh").html("My Color is Blue");
+        });
+
+        $(".green").dblclick(function () {
+          $(".sh").css({backgroundColor: "green", color: "white"});
+          $(".sh").html("My Color is Green");
+
+        });
+
+        $(".black").dblclick(function () {
+          $(".sh").css({backgroundColor: "black", color: "white"});
+          $(".sh").html("My Color is Black");
+        });
+
+        $(".reset").dblclick(function () {
+          $(".sh").css({backgroundColor: "", color: "white"});
+          $(".sh").html("My Color is Chocolate");
+        });
+      });
+    </script>
+  </body>
+</html>

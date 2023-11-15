@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Effects Practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>jQuery</h1>
+    <button class="hide">hide</button>
+    <button class="show">show</button>
+    <button class="toggle">toggle</button>
+
+    <script>
+      $(function () {
+        $(".hide").click(function () {
+          $("h1").hide(1000, function () {
+            alert("it's hide");
+          });
+          $("h1").css({ backgroundColor: "red" });
+        });
+
+        $(".show").click(function () {
+          $("h1").show(3000, function () {
+            alert("it's show");
+          });
+          $("h1").css({ backgroundColor: "blue", color: "white" });
+        });
+
+        $(".toggle").click(function () {
+          $("h1").toggle(500, function () {
+            alert("it's toggle");
+          });
+          $("h1").css({ backgroundColor: "black", color: "white" });
+        });
+      });
+    </script>
+  </body>
+</html>

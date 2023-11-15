@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serialize Array Form practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container {
+        background-color: brown;
+        height: 200px;
+        color: white;
+        border: 2px solid black;
+        margin-top: 100px;
+      }
+      .show {
+        background-color: chocolate;
+        border: 2px solid black;
+        height: 100px;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <table>
+          <tr>
+            <td>
+              <label for="name">Name</label>
+            </td>
+            <td>
+              <input type="text" name="Name" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pass">Password</label>
+            </td>
+            <td>
+              <input type="password" name="pass" />
+            </td>
+          </tr>
+        </table>
+      </form>
+      <button>Serialize Array</button>
+      <div class="show"></div>
+    </div>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          let a = $("form").serializeArray();
+          $.each(a, function (i, r) {
+            $(".show").append(r.name + ": " + r.value + " ");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

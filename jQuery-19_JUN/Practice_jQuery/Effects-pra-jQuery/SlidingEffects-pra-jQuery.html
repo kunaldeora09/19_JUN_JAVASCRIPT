@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliding Effects practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #slidedown {
+        background-color: blue;
+        color: white;
+        padding: 100px;
+        display: none;
+      }
+      #slideup {
+        background-color: brown;
+        color: white;
+        padding: 100px;
+      }
+      #slidetoggle {
+        background-color: chocolate;
+        color: white;
+        padding: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="slidedown">Slide Down</p>
+    <button id="slidedownbtn">Slide Down</button>
+    <hr />
+    <p id="slideup">Slide Up</p>
+    <button id="slideupbtn">Slide Up</button>
+    <hr />
+    <p id="slidetoggle">Slide Toggle</p>
+    <button id="slidetogglebtn">Slide Toggle</button>
+    <hr />
+
+    <script>
+      $(function () {
+        $("#slidedownbtn").click(function () {
+          $("#slidedown").slideDown(4000, function () {
+            alert("it's Slide Down");
+          });
+        });
+
+        $("#slideupbtn").click(function () {
+          $("#slideup").slideUp(4000, function () {
+            alert("it's Slide Up");
+          });
+        });
+
+        $("#slidetogglebtn").click(function () {
+          $("#slidetoggle").slideToggle(2000, function () {
+            alert("it's Slide Toggle");
+          });
+        });
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Remove Class practice jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .edit {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add Remove Class</h1>
+    <button class="add">Add Class</button>
+    <button class="remove">Remove Class</button>
+    <button class="toggle">Toggle Class</button>
+    <script>
+      $(function () {
+        $(".add").click(function () {
+          $("h1").addClass("edit");
+        });
+
+        $(".remove").click(function () {
+          $("h1").removeClass("edit");
+        });
+
+        $(".toggle").click(function () {
+          $("h1").toggleClass("edit");
+        });
+      });
+    </script>
+  </body>
+</html>
