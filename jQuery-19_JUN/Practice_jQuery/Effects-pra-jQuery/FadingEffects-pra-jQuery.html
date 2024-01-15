@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fading Effects practice jQuery</title>
+    <!-- jquery CDN Link -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -35,28 +36,33 @@
     </div>
     <script>
       $(function () {
+        // fadein function
         $(".fadein").click(function () {
           $(".sh").fadeIn(2000, function () {
             alert("it's Fadein");
           });
         });
+        // fadeout function
         $(".fadeout").click(function () {
           $(".sh").fadeOut(2000, function () {
             alert("it's Fadeout");
           });
         });
+        // fadetoggle function
         $(".fadetoggle").click(function () {
           $(".sh").fadeToggle(2000, function () {
             alert("it's Fadetoggle");
           });
         });
+        // fadeto function
         $(".fadeto").click(function () {
-          $(".sh").fadeTo(2000,0.4, function(){
+          $(".sh").fadeTo(2000, 0.4, function () {
             alert("it's Fadeto");
           });
         });
+        // fadeto function
         $(".fadeto2").click(function () {
-          $(".sh").fadeTo(2000, 1, function(){
+          $(".sh").fadeTo(2000, 1, function () {
             alert("it's Fadeto 2");
           });
         });

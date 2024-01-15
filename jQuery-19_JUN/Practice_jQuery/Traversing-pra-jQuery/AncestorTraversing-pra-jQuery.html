@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ancestor Traversign practice jQuery</title>
+    <!-- jQuery CDN Link -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
+    <style>
+      * {
+        margin: 20px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="great-grand-parent">
+      <div class="grand-parent">
+        <ul class="parent">
+          <li class="child-one">Child One</li>
+          <li class="child-two">Child Two</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // $(".child-two").parent().css("border", "2px solid red");
+      // $(".child-two").parents().css("border", "2px solid blue");
+      // $(".child-two").parentsUntil(".great-grand-parent").css("border", "2px solid teal");
+      $(".child-two").parentsUntil(".grand-parent").css("border", "2px solid teal");
+    </script>
+  </body>
 </html>

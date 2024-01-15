@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Event practice jQuery</title>
+    <!-- jQuery CDN Link -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -19,7 +20,7 @@
         margin-left: 100px;
         margin-top: 20px;
       }
-      button{
+      button {
         margin-left: 100px;
       }
     </style>
@@ -47,14 +48,17 @@
 
     <script>
       $(function () {
+        // focus function
         $("#name, #email, #choose").focus(function () {
           $(this).css({ backgroundColor: "red", color: "white" });
         });
 
+        // blur function
         $("#name, #email, #choose").blur(function () {
           $(this).css({ backgroundColor: "blue", color: "white" });
         });
 
+        // change function
         $("button").click(function () {
           $("#choose").change(function () {
             let a = $(this).val();

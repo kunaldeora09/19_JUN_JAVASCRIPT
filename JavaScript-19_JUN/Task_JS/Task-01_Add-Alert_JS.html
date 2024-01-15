@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 01 Addition in Alert</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <label for="num1">Number-1</label>
-    <input type="number" id="num1">
-    <br>
-    <br>
+    <input type="number" id="num1" />
+    <br />
+    <br />
     <label for="num2">Number-2</label>
-    <input type="number" id="num2">
-    <br>
-    <br>
+    <input type="number" id="num2" />
+    <br />
+    <br />
     <button onclick="add()">Addition</button>
 
     <script>
-        function add() {
-            var a = parseFloat(document.getElementById("num1").value);
-            var b = parseFloat(document.getElementById("num2").value);
-            var c = a + b;
-            alert("Addition is:- " + c);
-        }
+        // Addition
+      function add() {
+        var a = parseFloat(document.getElementById("num1").value);
+        var b = parseFloat(document.getElementById("num2").value);
+        var c = a + b;
+        alert("Addition is:- " + c);
+      }
     </script>
-</body>
-
+  </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Double Click Mouse Event practice jQuery</title>
+    <!-- jQuery CDN Link -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -31,29 +32,32 @@
 
     <script>
       $(function () {
+        // dblclick function
         $(".red").dblclick(function () {
-          $(".sh").css({backgroundColor: "red", color: "white"});
+          $(".sh").css({ backgroundColor: "red", color: "white" });
           $(".sh").html("My Color is Red");
         });
 
+        // dblclick function
         $(".blue").dblclick(function () {
-          $(".sh").css({backgroundColor: "blue", color: "white"});
+          $(".sh").css({ backgroundColor: "blue", color: "white" });
           $(".sh").html("My Color is Blue");
         });
 
+        // dblclick function
         $(".green").dblclick(function () {
-          $(".sh").css({backgroundColor: "green", color: "white"});
+          $(".sh").css({ backgroundColor: "green", color: "white" });
           $(".sh").html("My Color is Green");
-
         });
 
+        // dblclick function
         $(".black").dblclick(function () {
-          $(".sh").css({backgroundColor: "black", color: "white"});
+          $(".sh").css({ backgroundColor: "black", color: "white" });
           $(".sh").html("My Color is Black");
         });
 
         $(".reset").dblclick(function () {
-          $(".sh").css({backgroundColor: "", color: "white"});
+          $(".sh").css({ backgroundColor: "", color: "white" });
           $(".sh").html("My Color is Chocolate");
         });
       });

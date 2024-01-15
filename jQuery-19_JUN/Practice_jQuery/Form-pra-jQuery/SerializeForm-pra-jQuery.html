@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serialize Form practice jQuery</title>
+    <!-- jQuery CDN Link -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -55,6 +56,7 @@
     </div>
     <script>
       $(function () {
+        // serialize function
         $("button").click(function () {
           $(".show").text($("form").serialize());
         });

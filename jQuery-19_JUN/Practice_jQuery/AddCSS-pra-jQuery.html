@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add CSS practice jQuery</title>
+    <!-- jQuery CDN Link -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -39,6 +40,7 @@
 
     <script>
       $(document).ready(function () {
+        // Add CSS
         $("h1").css("color", "white");
         $("h1").css("background-color", "red");
         $("p").css({ backgroundColor: "gray", color: "pink" });
@@ -47,15 +49,18 @@
       });
 
       $(function () {
+        // CSS on Click
         $("span").click(function () {
           $(this).css({ backgroundColor: "lightblue", color: "red" });
         });
       });
 
       $(function () {
+        // CSS on Click
         $(".hi").click(function () {
-          $(".sp").css({backgroundColor: "blue", color : "yellow" });
+          $(".sp").css({ backgroundColor: "blue", color: "yellow" });
         });
+        // CSS on Click
         $(".sh").click(function () {
           $(".sp").css({ backgroundColor: "red", color: "white" });
         });

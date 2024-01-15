@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display Effects Practice jQuery</title>
+    <!-- jquery CDN Link -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -18,6 +19,7 @@
 
     <script>
       $(function () {
+        // hide function
         $(".hide").click(function () {
           $("h1").hide(1000, function () {
             alert("it's hide");
@@ -25,6 +27,7 @@
           $("h1").css({ backgroundColor: "red" });
         });
 
+        // show function
         $(".show").click(function () {
           $("h1").show(3000, function () {
             alert("it's show");
@@ -32,8 +35,9 @@
           $("h1").css({ backgroundColor: "blue", color: "white" });
         });
 
+        // toggle function
         $(".toggle").click(function () {
-          $("h1").toggle( function () {
+          $("h1").toggle(function () {
             alert("it's toggle");
           });
           $("h1").css({ backgroundColor: "black", color: "white" });
