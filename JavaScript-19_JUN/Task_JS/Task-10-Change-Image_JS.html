@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-10 Change Image in Javascript</title>
+  </head>
+  <body>
+    <img src="../Image_JS/01imageJS.jpg" alt="image" id="i1" height="500px" />
+
+    <script>
+      var x = document.getElementById("i1");
+
+      function slider() {
+        if (x.src.match("../Image_JS/01imageJS.jpg")) {
+          x.src = "../Image_JS/02imageJS.jpg";
+        } else if (x.src.match("../Image_JS/02imageJS.jpg")) {
+          x.src = "../Image_JS/03imageJS.jpeg";
+        } else if (x.src.match("../Image_JS/03imageJS.jpeg")) {
+          x.src = "../Image_JS/04imageJS.jpg";
+        } else {
+          x.src = "../Image_JS/01imageJS.jpg";
+        }
+        setTimeout(slider, 2000);
+      }
+
+      slider(); // Function Calling
+    </script>
+  </body>
+</html>

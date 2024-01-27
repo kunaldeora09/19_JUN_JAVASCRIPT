@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 09 Counter in Javascript</title>
+  </head>
+  <body>
+    <h1 class="res"></h1>
+
+    <script>
+      h1 = document.querySelector(".res");
+
+      x = 0;
+      function Counter() {
+        if (x < 653) {
+          h1.innerHTML = ++x;
+        //   setTimeout("Counter()", 10); // Method 1
+          setTimeout(Counter, 10); // Method 2
+        }
+      }
+      Counter();
+    </script>
+  </body>
+</html>
