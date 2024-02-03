@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Set Values Practice in JS</title>
+  </head>
+  <body>
+    <input type="text" name="" id="n1" />
+    <br />
+    <br />
+    <img id="img" src="../Image_JS/01imageJS.jpg" alt="image" />
+    <br />
+    <br />
+    <a id="anchor" href="../Image_JS/02imageJS.jpg">image</a>
+    <script>
+      a = document.getElementById("n1");
+      b = document.getElementById("img");
+      c = document.getElementById("anchor");
+
+      console.log(a);
+      console.log(b);
+      console.log(c);
+
+      a.type = "password";
+      a.setAttribute("type", "text");
+
+      a.value = "Kunal";
+      a.setAttribute("readonly", "");
+
+      b.title = "img";
+      b.alt = "not found";
+      b.src = "../Image_JS/03imageJS.jpeg";
+      b.width = "100";
+      b.height = "100";
+
+      c.innerHTML = "img";
+      console.log(c.id);
+      console.log(c.innerHTML);
+      c.href = "../Practice_JS/DOM-pra_JS.html";
+      c.target = "_blank";
+
+      alert(a.value);
+      alert(c.target);
+      alert(b.alt);
+    </script>
+  </body>
+</html>

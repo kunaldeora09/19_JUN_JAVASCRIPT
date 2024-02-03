@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add CSS Practice in JS</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+      }
+      .l {
+        width: 100px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 100px;
+        background-color: royalblue;
+      }
+      .an {
+        animation-name: side;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes side {
+        from {
+          margin-left: 0px;
+        }
+        to {
+          margin-left: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h">Hello</h1>
+    <h1 id="d">Hy</h1>
+    <div class="a"></div>
+    <div class="l"></div>
+    <button id="s" onclick="sd()">side</button>
+    <script>
+      k = document.getElementById("h");
+      i = document.getElementById("d");
+      o = document.querySelector(".a");
+      q = document.querySelector(".l");
+      k.style.color = "white";
+      i.style.backgroundColor = "pink";
+      k.style.backgroundImage = "linear-gradient(blue, red)";
+      i.innerHTML = "<u> Kunal </u>";
+      k.innerText = "<u> Text </u>";
+      o.className = "box";
+      o.className = "";
+      o.classList.add("box");
+      o.classList.remove("box");
+      o.classList.toggle("box");
+
+      function sd() {
+        // q.className = "an l";
+        q.classList.add("an");
+      }
+    </script>
+  </body>
+</html>
