@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Time Out - Set Interval Practice in JS</title>
+    <style>
+      #c {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        color: black;
+        font-size: 60px;
+        font-weight: bolder;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="c">0</div>
+    <button onclick="r()">Click to Counter Start</button>
+    <script>
+      // Counter start
+      function r() {
+        q = document.getElementById("c");
+        x = 0;
+        function t() {
+          q.innerHTML = ++x;
+          if (x < 237) {
+            setTimeout(t, 10);
+          }
+        }
+        t();
+      }
+      //   Counter end
+
+      // function 1 start
+
+      //   function a() {
+      //     document.write("kunal");
+      //   }
+      //   setTimeout(a, 2000);
+
+      // function 1 end
+
+      // function 2 start
+
+      //   function b() {
+      //     document.write("kunal ");
+      //   }
+      //   setInterval(b, 10);
+
+      // function 2 end
+    </script>
+  </body>
+</html>
