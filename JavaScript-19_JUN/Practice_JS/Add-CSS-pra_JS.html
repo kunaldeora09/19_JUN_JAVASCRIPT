@@ -30,6 +30,14 @@
           margin-left: 100px;
         }
       }
+      .abcd {
+        width: 100px;
+        height: 100px;
+        background-color: burlywood;
+      }
+      .line {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -38,11 +46,13 @@
     <div class="a"></div>
     <div class="l"></div>
     <button id="s" onclick="sd()">side</button>
+    <h2 id="h2">Head</h2>
     <script>
       k = document.getElementById("h");
       i = document.getElementById("d");
       o = document.querySelector(".a");
       q = document.querySelector(".l");
+      value = document.getElementById("h2");
       k.style.color = "white";
       i.style.backgroundColor = "pink";
       k.style.backgroundImage = "linear-gradient(blue, red)";
@@ -58,6 +68,10 @@
         // q.className = "an l";
         q.classList.add("an");
       }
+
+      value.className = "abcd line";
+      // value.classList.add("line", "abcd");
+      value.classList.remove("line");
     </script>
   </body>
 </html>
