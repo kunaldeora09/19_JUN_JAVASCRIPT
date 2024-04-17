@@ -4,27 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 07 Change Image in JS</title>
+    <style>
+      .d {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
   </head>
   <body>
-    <img src="../Image_JS/01imageJS.jpg" alt="image" id="i1" height="500px" />
-
+    <div class="d">
+      <!-- Click to Change Image -->
+      <div>
+        <h2>Click to Change Image</h2>
+        <img
+          src="../Image_JS/01imageJS.jpg"
+          id="i1"
+          alt="image"
+          height="200px"
+        />
+        <br />
+        <button onclick="change()">Click Here</button>
+      </div>
+      <!-- Automatic Change Image -->
+      <div>
+        <h2>Automatic Change Image</h2>
+        <img
+          src="../Image_JS/01imageJS.jpg"
+          id="i2"
+          alt="image"
+          height="200px"
+        />
+      </div>
+    </div>
     <script>
+      // Click to Change Image
       var x = document.getElementById("i1");
 
-      function slider() {
+      function change() {
         if (x.src.match("../Image_JS/01imageJS.jpg")) {
           x.src = "../Image_JS/02imageJS.jpg";
         } else if (x.src.match("../Image_JS/02imageJS.jpg")) {
           x.src = "../Image_JS/03imageJS.jpeg";
         } else if (x.src.match("../Image_JS/03imageJS.jpeg")) {
           x.src = "../Image_JS/04imageJS.jpg";
+        } else if (x.src.match("../Image_JS/04imageJS.jpg")) {
+          x.src = "../Image_JS/01imageJS.jpg";
         } else {
           x.src = "../Image_JS/01imageJS.jpg";
         }
-        setTimeout(slider, 2000);
       }
 
-      slider(); // Function Calling
+      //  Automatic Change Image
+      var y = document.getElementById("i2");
+
+      function Automatic() {
+        if (y.src.match("../Image_JS/01imageJS.jpg")) {
+          y.src = "../Image_JS/02imageJS.jpg";
+        } else if (y.src.match("../Image_JS/02imageJS.jpg")) {
+          y.src = "../Image_JS/03imageJS.jpeg";
+        } else if (y.src.match("../Image_JS/03imageJS.jpeg")) {
+          y.src = "../Image_JS/04imageJS.jpg";
+        } else if (y.src.match("../Image_JS/04imageJS.jpg")) {
+          y.src = "../Image_JS/01imageJS.jpg";
+        } else {
+          y.src = "../Image_JS/01imageJS.jpg";
+        }
+        setTimeout(Automatic, 1000);
+      }
+
+      Automatic();
     </script>
   </body>
 </html>
