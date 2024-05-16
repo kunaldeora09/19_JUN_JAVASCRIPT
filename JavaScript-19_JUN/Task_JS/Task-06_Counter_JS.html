@@ -6,20 +6,33 @@
     <title>Task 06 Counter in JS</title>
   </head>
   <body>
-    <h1 class="res"></h1>
+    <h1 class="res">0</h1>
+    <button onclick="st()">Start</button>
+    <button onclick="sp()">Stop</button>
 
     <script>
       h1 = document.querySelector(".res");
-
       x = 0;
-      function Counter() {
-        if (x < 653) {
-          h1.innerHTML = ++x;
-          //   setTimeout("Counter()", 10); // Method 1
-          setTimeout(Counter, 10); // Method 2
+      s = 0;
+
+      function st() {
+        if (s == 0) {
+          s = s + 1;
+          d = setInterval(Counter, 10);
+          function Counter() {
+            if (x < 653) {
+              h1.innerHTML = ++x;
+            }
+          }
         }
       }
-      Counter();
+
+      function sp() {
+        if (s == 1) {
+          s = s - 1;
+          clearInterval(d);
+        }
+      }
     </script>
   </body>
 </html>
